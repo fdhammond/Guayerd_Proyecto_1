@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Arquitectura cliente-servidor. Aprender Internet. Cómo funciona Internet</title>
+</head>
+
+<body>
+
+    <div class="background-title">
+
+        <h1>ARQUITECTURA CLIENTE - SERVIDOR</h1>
+
+    </div>
+
+    <div class="background-p">
+        <h3>
+            Descubre como funciona Internet junto a nosotros
+        </h3>
+
+
+
+        <p>Cómo funciona la Web proporciona una vista simplificada de lo que sucede cuando ves una
+            página web en un navegador web de tu computadora o teléfono.</p>
+
+        <p>
+            Esta teoría no es esencial para escribir código web a corto plazo, pero en poco tiempo
+            empezarás a beneficiarte realmente al entender lo que está sucediendo en el fondo.
+        </p>
+
+
+        <h3>
+            Los clientes y servidores
+        </h3>
+
+
+        <p>
+            Las computadoras conectadas a la Web se llaman clientes y servidores. Los clientes son
+            dispositivos de los usuarios conectados a Internet (por ejemplo, tu ordenador conectado a la
+            red Wi-Fi o el teléfono conectado a la red de telefonía móvil) y el software que se encuentra
+            disponible y permite acceder a Internet en dichos dispositivos (normalmente, un navegador
+            web como Firefox o Chrome). <br>
+            Los servidores son computadoras que almacenan páginas web, sitios o aplicaciones.
+            Cuando un dispositivo cliente quiere acceder a una página web, una copia de la página web
+            se descarga desde el servidor en el equipo cliente y se mostrará en el navegador web del
+            usuario.
+        </p>
+
+
+        <h3>Las otras partes de la caja de herramientas</h3>
+
+
+        <p>El cliente y el servidor que describimos anteriormente, no cuentan toda la historia. Hay
+            muchas otras partes involucradas y vamos a describirlas a continuación.
+            Por ahora, imaginemos que la Web es un camino. En un extremo de la carretera, está el
+            cliente, que es como tu casa. En el extremo opuesto del camino, está el servidor, que es
+            una tienda en la que deseas comprar algo.</p>
+
+        <p>Además del cliente y el servidor, también tenemos que saludar a:</p>
+
+        <ul>
+            <li>
+                <p>Tu conexión a Internet: Permite enviar y recibir datos en la Web. Básicamente es el
+                    recorrido entre tu casa y la tienda.</p>
+            </li>
+            <li>
+                <p>TCP/IP: Protocolo de Control de Transmisión y Protocolo de Internet, son los
+                    protocolos de comunicación que definen cómo deben viajar los datos a través de la
+                    Web. Esto es, los medios de transporte que te permiten hacer un pedido, ir a la
+                    tienda y comprar los productos. En nuestro ejemplo, podría ser un coche, una
+                    bicicleta o tus propios pies.</p>
+            </li>
+            <li>
+                <p>
+                    DNS: Los servidores del Sistema de Nombres de Dominio (DNS, por sus siglas en
+                    inglés), son como una libreta de direcciones de sitios web. Cuando escribes una
+                    dirección web en el navegador, el navegador busca los DNS antes de recuperar el
+                    sitio web. El navegador necesita averiguar en qué servidor vive el sitio web y así
+                    enviar los mensajes HTTP al lugar correcto (ver más abajo). Esto es como buscar la
+                    dirección de la tienda para que puedas llegar a ella.
+                </p>
+            </li>
+            <li>
+                <p>
+                    HTTP: El Protocolo de Transferencia de Hipertexto es un protocolo de aplicación que
+                    define un idioma para que los clientes y servidores se puedan comunicar. Esto es
+                    como el idioma que utilizas para ordenar tus compras.
+                </p>
+            </li>
+            <li>
+                <p>Archivos componentes: Un sitio web se compone de muchos archivos diferentes,
+                    que son como las diferentes partes de los productos que comprarás en la tienda.
+                    Estos archivos se dividen en dos tipos principales: <br>
+            <li>
+                <p>Archivos de código: los sitios web se construyen principalmente con HTML,
+                    CSS y JavaScript, aunque te encontrarás con otras tecnologías más
+                    adelante.</p>
+            </li>
+            <li>
+                <p>Recursos: Este es un nombre colectivo para el resto de materiales que
+                    conforman un sitio web, como imágenes, música, video, documentos de
+                    Word, archivos PDF, etc.</p>
+            </li>
+            </p>
+            </li>
+        </ul>
+
+        <h3>Entonces, ¿qué sucede exactamente?</h3>
+
+        <p>Cuando escribes una dirección web en el navegador (usando nuestra analogía para ir a la
+            tienda):</p>
+
+        <ol>
+            <li>
+                <p>El navegador va al servidor DNS y encuentra la dirección real del servidor donde el
+                    sitio web vive (encontrar la dirección de la tienda).</p>
+            </li>
+            <li>
+                <p>El navegador envía un mensaje de petición HTTP al servidor, pidiéndole que envíe
+                    una copia de la página web para el cliente (ir a la tienda y hacer un pedido). Este
+                    mensaje y todos los datos enviados entre el cliente y el servidor, se envían a través
+                    de tu conexión a Internet usando TCP/IP.</p>
+            </li>
+            <li>
+                <p>Siempre que el servidor apruebe la solicitud del cliente, el servidor enviará al cliente
+                    un mensaje "200 OK", que significa, "¡por supuesto que puedes ver ese sitio web!
+                    Aquí está.", y comenzará a enviar los archivos de la página web al navegador como
+                    una serie de pequeños trozos llamados paquetes de datos (la tienda te entrega tus
+                    productos y los llevas de regreso a casa).</p>
+            </li>
+            <li>
+                <p>El navegador reúne los pequeños trozos, forma un sitio web completo y te lo
+                    muestra (llegas a casa con tus nuevas compras).</p>
+            </li>
+        </ol>
+
+        <h3>Explicando los DNS</h3>
+        <p>Las direcciones web reales no son las agradables y fácilmente recordables secuencias que
+            tecleas en la barra de direcciones para encontrar tus sitios web favoritos. En realidad, se
+            trata de secuencias de números, algo como 63.245.217.105.
+            Lo anterior se llama dirección IP y representa un lugar único en la Web. Sin embargo, no es
+            muy fácil de recordar, ¿verdad? Por eso se inventaron los servidores de nombres de
+            dominio. Éstos son servidores especiales que hacen coincidir una dirección web tecleada
+            desde tu navegador ("mozilla.org", por ejemplo) con la dirección real del sitio web (IP).
+            Los sitios web pueden ser accedidos directamente a través de sus direcciones IP. Intenta
+            acceder a la página web de Mozilla escribiendo 63.245.217.105 en la barra de dirección de
+            una nueva pestaña en tu navegador.</p>
+
+        <h3>Explicando los paquetes</h3>
+        <p>Anteriormente hemos utilizado el término paquetes para describir el formato en que los
+            datos se envían desde el servidor al cliente. ¿Qué significa esto? Básicamente, que los
+            datos se envían a través de la Web como miles de trozos pequeños, permitiendo que
+            muchos usuarios pueden descargar la misma página web al mismo tiempo. Si los sitios web
+            fueran enviados como grandes trozos, sólo un usuario podría descargarlos a la vez, lo que
+            volvería a la Web muy ineficiente y poco divertida.</p>
+    </div>
+</body>
+
+</html>
